@@ -9,6 +9,10 @@ import (
 func main() {
 	app := cli.NewApp()
 
+	app.Name = "Read Files"
+	app.Usage = "Read multiple files in a directory"
+	app.Version = "1.0.0"
+
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "dir",
@@ -32,5 +36,3 @@ func main() {
 
 	app.Run(os.Args)
 }
-
-
